@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'bP';
+    src: url(./fonts/Peyda-Bold.ttf);
+}
+@font-face {
+    font-family: 'blP';
+    src: url(./fonts/Peyda-Black.ttf);
+}
+@font-face {
+    font-family: 'sbP';
+    src: url(./fonts/Peyda-SemiBold.ttf);
+}
+body{
+    font-family: 'sbP';
+}
+#header{
+    width: 570px;
+    height: 400px;
+    margin: 200px auto;
+    display: flex;
+    justify-content: space-between;
+}
+@keyframes img-anim {
+    0%{
+        margin-left: -80px;
+        opacity: 0;
+    }
+    100%{
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+#img{
+    width: 300px;
+    height: 400px;
+    animation-name: img-anim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+#img > img{
+    width: 100%;
+}
+@keyframes con-anim {
+    0%{
+        margin-top: 110px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 40px;
+        opacity: 1;
+    }
+}
+#header > div#context{
+    width: 250px;
+    height: 80%;
+    margin-top: 40px;
+    animation-name: con-anim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+#header > div > h2{
+    font-family: 'blP';
+    color: #5465af;
+    font-size: 38px;
+    margin: 0;
+}
+#header > div > h3{
+    color: #444545;
+    font-size: 24px;
+    margin: 0;
+}
+#header > div > p{
+    color: #747475;
+}
+#header > div > h2 > span{
+    display: block;
+    margin-top: -10px;
+}
+@keyframes box-anim {
+    0%{
+        margin-top: 0px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: -100px;
+        opacity: 1;
+    }
+}
+#box{
+    width: 1208px;
+    min-height: 300px;
+    margin: -100px auto 100px auto;
+    /* border: 1px solid; */
+    display: flex;
+    flex-wrap: wrap;
+    animation-name: box-anim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+#box >div{
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid; */
+}
+#box >div > img{
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 480px) {
+    @keyframes box-anim {
+        0%{
+            margin-top: 0px;
+            opacity: 0;
+        }
+        100%{
+            margin-top: 30px;
+            opacity: 1;
+        }
+    }
+    #header{
+        margin: 50px auto;
+        width: 80%;
+        display: block;
+        height: auto;
+    }
+    #img{
+        width: 100%;
+        height: auto;
+    }
+    #header > div#context{
+        height: auto;
+    }
+    #box{
+        width: 80%;
+        height: 300px;
+        margin: 30px auto;
+        /* border: 1px solid; */
+    }
+    #box >div{
+        margin-top: 10px;
+    }
+  }
